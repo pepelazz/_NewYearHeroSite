@@ -3,6 +3,19 @@ var ngModule;
 
 ngModule = angular.module('app', [require('./quiz/quiz.coffee')]);
 
+ngModule.controller('mainCtrl', [
+  '$scope', (function($scope) {
+    var step;
+    step = 0;
+    $scope.getBg = (function() {
+      return "bg0" + step;
+    });
+    $scope.quizStart = (function(isMan) {
+      step = 1;
+    });
+  })
+]);
+
 
 },{"./quiz/quiz.coffee":2}],2:[function(require,module,exports){
 var ngModule;

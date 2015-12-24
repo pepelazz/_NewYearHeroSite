@@ -50,18 +50,30 @@
 body {
   font-family: 'Arimo', sans-serif;
   height: 100%;
-  width: 100%; }
-  /* line 18, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+  width: 100%;
+  background-size: cover; }
+  /* line 22, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
   body.bg00 {
-    background: url("./static/img/bg00.jpg") no-repeat center center fixed;
-    background-size: cover; }
+    background: url("./static/img/bg00.jpg") no-repeat center center fixed; }
+  /* line 24, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+  body.bg01 {
+    background: url("./static/img/bg01.jpg") no-repeat center center fixed; }
+  /* line 26, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+  body.bg02 {
+    background: url("./static/img/bg02.jpg") no-repeat center center fixed; }
+  /* line 28, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+  body.bg03 {
+    background: url("./static/img/bg03.jpg") no-repeat center center fixed; }
+  /* line 30, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+  body.bg04 {
+    background: url("./static/img/bg04.jpg") no-repeat center center fixed; }
 
-/* line 25, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+/* line 33, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
 p {
   font-size: 1.3rem;
   line-height: 1.7; }
 
-/* line 31, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+/* line 39, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
 .btn {
   line-height: 1;
   background: white;
@@ -72,64 +84,94 @@ p {
   margin-top: 2rem;
   text-decoration: none;
   color: black; }
-  /* line 41, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+  /* line 49, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
   .btn:hover {
     background: #CCCCCC; }
-  /* line 44, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+  /* line 52, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
   .btn:disabled:hover {
     background: white; }
 
-/* line 47, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+/* line 55, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+.col-2 {
+  width: 15.25424%;
+  float: left;
+  margin-right: 1.69492%; }
+
+/* line 57, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
 .col-3 {
   width: 23.72881%;
   float: left;
   margin-right: 1.69492%; }
 
-/* line 49, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+/* line 59, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
 .col-4 {
   width: 32.20339%;
   float: left;
   margin-right: 1.69492%; }
 
-/* line 51, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+/* line 61, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
 .col-5 {
   width: 40.67797%;
   float: left;
   margin-right: 1.69492%; }
 
-/* line 53, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+/* line 63, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
 .col-6 {
   width: 49.15254%;
   float: left;
   margin-right: 1.69492%; }
 
-/* line 55, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+/* line 65, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+.offset-1 {
+  margin-left: 8.47458%; }
+
+/* line 67, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
 .offset-2 {
   margin-left: 16.94915%; }
 
-/* line 57, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+/* line 69, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
 .offset-3 {
   margin-left: 25.42373%; }
 
-/* line 59, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+/* line 71, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
 .offset-4 {
   margin-left: 33.89831%; }
 
-/* line 61, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+/* line 73, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
 .offset-5 {
   margin-left: 42.37288%; }
 
-/* line 63, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+/* line 75, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
 .offset-6 {
   margin-left: 50.84746%; }
 
-/* line 65, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+/* line 77, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
 .offset-7 {
   margin-left: 59.32203%; }
 
-/* line 67, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+/* line 79, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
 .offset-8 {
   margin-left: 67.79661%; }
+
+/* line 82, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+.sex-choose {
+  margin-top: 9rem; }
+  @media (max-width: 768px) {
+    /* line 82, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+    .sex-choose {
+      margin-top: 1rem; } }
+  /* line 86, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+  .sex-choose .btn {
+    font-size: 1.5rem;
+    background-color: #0C6E7F;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    color: white;
+    border: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19); }
+    /* line 94, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+    .sex-choose .btn:hover {
+      background-color: #1096ae; }
 
 /* line 1, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/vendor/_normalize.sass */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
