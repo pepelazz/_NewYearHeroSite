@@ -3,9 +3,17 @@ var data, ngModule;
 
 ngModule = angular.module('app', [require('./quiz/quiz.coffee')]);
 
+ngModule.config([
+  '$locationProvider', (function($locationProvider) {
+    $locationProvider.html5Mode(true);
+  })
+]);
+
 ngModule.controller('mainCtrl', [
-  '$scope', (function($scope) {
+  '$scope', '$window', '$location', (function($scope, $window, $location) {
+    var pathList;
     $scope.step = 0;
+    $scope.score = [0, 0, 0, 0];
     $scope.getBg = (function() {
       return "bg0" + $scope.step;
     });
@@ -17,10 +25,27 @@ ngModule.controller('mainCtrl', [
       $scope.step = 1;
       $scope.sex = sex;
     });
-    $scope.nextQstn = (function(score) {
-      $scope.step++;
-      console.log(score);
+    $scope.nextQstn = (function(i) {
+      var max, path, result;
+      $scope.score[i]++;
+      console.log($scope.score);
+      if ($scope.step < 4) {
+        $scope.step++;
+      } else {
+        max = _.max($scope.score);
+        result = max > 1 ? _.findIndex($scope.score, function(v) {
+          return v === max;
+        }) : i;
+        console.log('max', max, 'result', result);
+        path = pathList[$scope.sex][result];
+        $location.path("/" + path + ".html");
+        $window.location.reload();
+      }
     });
+    pathList = {
+      man: ['eWRhpRV', '23TplPdS', '46Juzcyx', 'dBvJIh-H'],
+      girl: ['2WEKaVNO', '7oet_d9Z', 'dogPzIz8', 'nYrnfYEv']
+    };
   })
 ]);
 
@@ -30,31 +55,31 @@ data = [
     man: [
       {
         text: 'Подбираете модный look, в котором пойдете на тусовку.',
-        score: '1'
+        score: '0'
       }, {
         text: 'Ищите, где отпраздновать. Желательно – за границей.',
-        score: '2'
+        score: '1'
       }, {
         text: 'Отправляетесь на оптовый склад закупиться вином.',
-        score: '3'
+        score: '2'
       }, {
         text: 'Тщательно планируете вечеринку. Без вас не справятся.',
-        score: '4'
+        score: '3'
       }
     ],
     girl: [
       {
         text: 'Выбираете, в какой компании отметить.',
-        score: '5'
+        score: '0'
       }, {
         text: 'Воспринимаете все философски: пусть все пройдет так, как должно быть.',
-        score: '6'
+        score: '1'
       }, {
         text: 'Выбираете новогодний наряд. Вы должны всех затмить.',
-        score: '7'
+        score: '2'
       }, {
         text: 'Ищите турбазу или домик в лесу.',
-        score: '8'
+        score: '3'
       }
     ]
   }, {
@@ -62,31 +87,31 @@ data = [
     man: [
       {
         text: 'Оригинальные сувениры.',
-        score: '2'
-      }, {
-        text: 'Бутылку. Хорошую. Дорогую.',
-        score: '3'
-      }, {
-        text: 'Все, что угодно. Главное красиво упаковать.',
         score: '1'
       }, {
+        text: 'Бутылку. Хорошую. Дорогую.',
+        score: '2'
+      }, {
+        text: 'Все, что угодно. Главное красиво упаковать.',
+        score: '0'
+      }, {
         text: 'Я люблю большие подарки. Главное дотащить их до места…',
-        score: '4'
+        score: '3'
       }
     ],
     girl: [
       {
         text: 'Что-то практичное. Например, теплый шарф или лыжную маску.',
-        score: '8'
+        score: '3'
       }, {
         text: 'Мне нравится дарить красивые подарки.',
-        score: '7'
+        score: '2'
       }, {
         text: 'Люблю подарки со скрытым смыслом.',
-        score: '6'
+        score: '1'
       }, {
         text: 'Я сама – лучший подарок. ',
-        score: '5'
+        score: '0'
       }
     ]
   }, {
@@ -94,31 +119,31 @@ data = [
     man: [
       {
         text: 'Неважно где. Лишь бы в дружной компании.',
-        score: '3'
-      }, {
-        text: 'На море или в горах. В общем, за рубежом.',
         score: '2'
       }, {
+        text: 'На море или в горах. В общем, за рубежом.',
+        score: '1'
+      }, {
         text: 'Где угодно. Главное, чтобы все шло по плану.',
-        score: '4'
+        score: '3'
       }, {
         text: 'В клубе. Должно быть весело и многолюдно.',
-        score: '1'
+        score: '0'
       }
     ],
     girl: [
       {
         text: 'Всегда по-разному. На городской площади или в лесу.',
-        score: '8'
+        score: '3'
       }, {
         text: 'В клубе. Должно быть весело и многолюдно. ',
-        score: '5'
+        score: '0'
       }, {
         text: 'У себя дома. И позову побольше гостей.',
-        score: '7'
+        score: '2'
       }, {
         text: 'Место не имеет значение. Главное – люди, которые рядом.',
-        score: '6'
+        score: '1'
       }
     ]
   }, {
@@ -126,31 +151,31 @@ data = [
     man: [
       {
         text: 'Билет на самолет. Обожаю новогодние путешествия.',
-        score: '2'
-      }, {
-        text: 'Бокальчик красного вина или глинтвейна.',
-        score: '3'
-      }, {
-        text: 'Пара-другая бодрящих коктейлей. ',
         score: '1'
       }, {
+        text: 'Бокальчик красного вина или глинтвейна.',
+        score: '2'
+      }, {
+        text: 'Пара-другая бодрящих коктейлей. ',
+        score: '0'
+      }, {
         text: 'Текила с лимоном и солью. Можно без лимона. Можно без текилы.',
-        score: '4'
+        score: '3'
       }
     ],
     girl: [
       {
         text: 'Шампанское. Чтоб пузырьки в голову ударили!',
-        score: '5'
+        score: '0'
       }, {
         text: 'Хорошо бы снег пошел. Должно быть много снега!',
-        score: '8'
+        score: '3'
       }, {
         text: 'Настроение появится, как только открою первый подарок. ',
-        score: '7'
+        score: '2'
       }, {
         text: 'Ароматные запахи новогодних блюд на столе.',
-        score: '6'
+        score: '1'
       }
     ]
   }
