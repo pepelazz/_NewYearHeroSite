@@ -46,8 +46,8 @@ ngModule.controller('mainCtrl', [
       $window.location.reload('true');
     });
     pathList = {
-      man: ['eWRhpRV', '23TplPdS', '46Juzcyx', 'dBvJIh-H'],
-      girl: ['2WEKaVNO', '7oet_d9Z', 'dogPzIz8', 'nYrnfYEv']
+      man: ['eWRhpRV1', '23TplPdS', '46Juzcyx', 'dBvJIh-H'],
+      girl: ['2WEKaVNO', '7oet_d9Z', 'dogPzIz8', 'nYrnfYEv1']
     };
     window.fbAsyncInit = (function() {
       FB.init({
