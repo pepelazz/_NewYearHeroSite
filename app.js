@@ -43,7 +43,7 @@ ngModule.controller('mainCtrl', [
       }
     });
     $scope.toQuizStart = (function() {
-      $location.path("/");
+      $location.path("/index.html");
       $window.location.reload('true');
     });
     pathList = {
