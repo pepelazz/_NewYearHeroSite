@@ -287,7 +287,7 @@ p {
 /* line 177, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
 .quiz-again {
   position: fixed;
-  top: 20px;
+  top: 70px;
   right: 0.3rem;
   font-size: 1.2rem;
   padding: 0.5rem 1.5rem;
@@ -308,13 +308,18 @@ p {
   position: fixed;
   right: 6px;
   top: 3px; }
+  /* line 196, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+  .social p {
+    font-size: 0.9rem;
+    color: white; }
   @media (max-width: 768px) {
     /* line 192, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
     .social {
       bottom: 0;
       top: auto; } }
-  /* line 199, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+  /* line 202, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
   .social .btn {
+    float: right;
     margin: 0;
     color: white;
     border: none;
@@ -322,10 +327,10 @@ p {
     margin-left: 0.5rem;
     width: 1.3rem;
     text-align: center; }
-    /* line 207, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+    /* line 211, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
     .social .btn.fb {
       background: #3B5998; }
-    /* line 209, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+    /* line 213, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
     .social .btn.vk {
       background: #45668E; }
 
