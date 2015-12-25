@@ -44,7 +44,7 @@ ngModule.controller('mainCtrl', [
     });
     $scope.toQuizStart = (function() {
       $location.path("/");
-      $window.location.reload();
+      $window.location.reload('true');
     });
     pathList = {
       man: ['eWRhpRV', '23TplPdS', '46Juzcyx', 'dBvJIh-H'],
