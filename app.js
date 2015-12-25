@@ -12,6 +12,7 @@ ngModule.config([
 ngModule.controller('mainCtrl', [
   '$scope', '$window', '$location', (function($scope, $window, $location) {
     var pathList;
+    console.log('FB', FB);
     $scope.step = 0;
     $scope.score = [0, 0, 0, 0];
     $scope.getBg = (function() {

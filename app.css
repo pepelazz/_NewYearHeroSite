@@ -306,13 +306,28 @@ p {
 /* line 192, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
 .social {
   position: fixed;
-  right: 0;
+  right: 6px;
   top: 3px; }
   @media (max-width: 768px) {
     /* line 192, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
     .social {
       bottom: 0;
       top: auto; } }
+  /* line 199, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+  .social .btn {
+    margin: 0;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+    width: 1.3rem;
+    text-align: center; }
+    /* line 207, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+    .social .btn.fb {
+      background: #3B5998; }
+    /* line 209, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/partials/_style.sass */
+    .social .btn.vk {
+      background: #45668E; }
 
 /* line 1, /Users/Trikster/static_sites/NewYearHero/_NewYearHero/src/sass/vendor/_normalize.sass */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
