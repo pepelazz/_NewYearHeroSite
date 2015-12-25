@@ -11,7 +11,7 @@ ngModule.config([
 
 ngModule.controller('mainCtrl', [
   '$scope', '$window', '$location', (function($scope, $window, $location) {
-    var pathList;
+    var Share, pathList;
     $scope.step = 0;
     $scope.score = [0, 0, 0, 0];
     $scope.getBg = (function() {
@@ -62,6 +62,22 @@ ngModule.controller('mainCtrl', [
         method: 'share',
         href: 'http://newyearhero.ru/' + path
       });
+    };
+    $scope.shareVK = function(path, imgURL) {
+      return Share.vk('http://newyearhero.ru/' + path, imgURL);
+    };
+    Share = {
+      vk: function(purl, pimg, text) {
+        var url;
+        url = 'http://vkontakte.ru/share.php?';
+        url += 'url=' + encodeURIComponent(purl);
+        url += '&image=' + encodeURIComponent(pimg);
+        url += '&noparse=true';
+        return Share.popup(url);
+      },
+      popup: function(url) {
+        return window.open(url, '', 'toolbar=0,status=0,width=626,height=436');
+      }
     };
   })
 ]);
