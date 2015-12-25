@@ -28,7 +28,6 @@ ngModule.controller('mainCtrl', [
     $scope.nextQstn = (function(i) {
       var max, path, result;
       $scope.score[i]++;
-      console.log($scope.score);
       if ($scope.step < 4) {
         $scope.step++;
       } else {
@@ -36,7 +35,6 @@ ngModule.controller('mainCtrl', [
         result = max > 1 ? _.findIndex($scope.score, function(v) {
           return v === max;
         }) : i;
-        console.log('max', max, 'result', result);
         path = pathList[$scope.sex][result];
         $location.path("/" + path + ".html");
         $window.location.reload();
@@ -50,6 +48,20 @@ ngModule.controller('mainCtrl', [
     pathList = {
       man: ['eWRhpRV', '23TplPdS', '46Juzcyx', 'dBvJIh-H'],
       girl: ['2WEKaVNO', '7oet_d9Z', 'dogPzIz8', 'nYrnfYEv']
+    };
+    window.fbAsyncInit = (function() {
+      FB.init({
+        appId: '1501804436788119',
+        cookie: true,
+        xfbml: true,
+        version: 'v2.5'
+      });
+    });
+    $scope.shareFB = function(path) {
+      return FB.ui({
+        method: 'share',
+        href: 'http://newyearhero.ru/' + path
+      });
     };
   })
 ]);
