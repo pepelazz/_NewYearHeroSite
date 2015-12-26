@@ -11,7 +11,7 @@ ngModule.config([
 
 ngModule.controller('mainCtrl', [
   '$scope', '$window', '$location', '$timeout', (function($scope, $window, $location, $timeout) {
-    var Share, pathList;
+    var Share, pathList, y;
     $scope.step = 0;
     $scope.score = [0, 0, 0, 0];
     $scope.getBg = (function() {
@@ -39,6 +39,7 @@ ngModule.controller('mainCtrl', [
         window.location = "/" + path + ".html";
       }
     });
+    y = 0;
     $scope.toQuizStart = (function() {
       $scope.step = 0;
       window.location = '/';
