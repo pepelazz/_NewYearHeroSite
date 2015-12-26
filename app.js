@@ -10,7 +10,7 @@ ngModule.config([
 ]);
 
 ngModule.controller('mainCtrl', [
-  '$scope', '$window', '$location', (function($scope, $window, $location) {
+  '$scope', '$window', '$location', '$timeout', (function($scope, $window, $location, $timeout) {
     var Share, pathList;
     $scope.step = 0;
     $scope.score = [0, 0, 0, 0];
@@ -36,14 +36,12 @@ ngModule.controller('mainCtrl', [
           return v === max;
         }) : i;
         path = pathList[$scope.sex][result];
-        $location.path("/" + path + ".html");
-        $window.location.reload();
+        window.location = "/" + path + ".html";
       }
     });
     $scope.toQuizStart = (function() {
       $scope.step = 0;
-      $location.path("/");
-      window.location.reload('true');
+      window.location = '/';
     });
     pathList = {
       man: ['eWRhpRV1', '23TplPdS', '46Juzcyx', 'dBvJIh-H'],
